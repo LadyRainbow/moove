@@ -193,7 +193,29 @@ $(document).ready(function () {
         $('body, html').addClass('active');
         $popUpGeneralBlock.removeClass('active');
         $('#form').addClass('active');
+        if($(this).closest('.chosen-section')) {
+            var value = $(this).closest('.chosen-section').find('.directions.active .chosen-li.active .chosen-span').text();
+            $('#categorySelect2 option').each(function () {
+                $(this).attr('selected', false);
+                $('#categorySelect2').val(value).trigger('change');
+                if (value == $(this).attr('value')) {
+                    $(this).attr('selected', true);
+                    $('.pop-up-general-block .custom-select-head span').text(value);
+                } else {
+                    console.log('error');
+                };
+            });
+            $('.pop-up-general-block .custom-select-list li').each(function () {
+                $(this).removeClass('selected');
+                if (value == $(this).text()) {
+                    $(this).addClass('selected');
+                };
+            });
+
+
+        }
     });
+
     $('.open-pop-up-menu').click(function (e) {
         $overlayPopUpWRP.addClass('active');
         $('body, html').addClass('active');

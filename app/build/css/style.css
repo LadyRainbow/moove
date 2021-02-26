@@ -885,6 +885,9 @@ footer {
 main {
   overflow: hidden; }
 
+.directions-dance-list li > span.chosen-span::before {
+  display: none; }
+
 .section-main {
   display: -webkit-box;
   display: -webkit-flex;

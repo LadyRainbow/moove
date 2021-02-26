@@ -1,6 +1,9 @@
 main {
     overflow: hidden;
 }
+.directions-dance-list li > span.chosen-span::before {
+    display: none;
+}
 .section-main {
     display: flex;
     flex-direction: column;
