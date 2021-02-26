@@ -1,0 +1,121 @@
+.pop-up-overlay-wrapper {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    .overlay-pop-up {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(46, 46, 46, 0.7);
+        z-index: 6;
+    }
+    &.active {
+        display: flex;
+        opacity: 1;
+    }
+}
+.pop-up-general-block {
+    padding: 56px 95px 64px 40px;
+    position: relative;
+    max-height: 85vh;
+    max-width: 90%;
+    width: 540px;
+    z-index: 7;
+    display: none;
+    background: #FFFFFF;
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.06), 0px 2px 6px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    &.active {
+        display: block;
+    }
+    &.thnx {
+        .form-title  {
+            & + div {
+                line-height: 1.5;
+            }
+        }
+    }
+    form {
+        margin-top: 42px;
+        .form-btn {
+            margin-top: 56px;
+        }
+    }
+    .input-block {
+        padding: 0;
+        margin-bottom: 32px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &.input-block-name {
+            width: 100%;
+        }
+    }
+}
+.form-title {
+    font-family: 'Montserrat';
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #3C3C3C;
+    margin-bottom: 16px;
+}
+
+
+.pop-up-general-block-close-btn {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    &::before, &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        margin-top: -1px;
+        margin-left: -10px;
+        height: 2px;
+        display: block;
+        transition: .2s;
+        background-color: #474747;
+    }
+    &::before {
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
+
+
+
+@media (max-width: 767px) {
+    .pop-up-general-block {
+        padding: 46px 55px 64px 25px;
+        .custom-select-head {
+            width: 100%;
+        }
+        form {
+            margin-top: 32px;
+        }
+    }
+    .form-title  {
+        font-size: 24px;
+        margin-bottom: 14px;
+    }
+}
