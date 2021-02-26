@@ -1,25 +1,25 @@
 .not-found {
-    padding-top: 235px;
+    padding-top: 100px;
     text-align: center;
     height: 100vh;
     height: calc(var(--vhMenu, 1vh) * 100);
-    h2 {
+    h3 {
         margin-bottom: 24px;
     }
     a {
-        color: #D1017D;
+        color: #E72B5C;
         text-decoration: underline;
         transition: .2s;
         &:hover {
-            color: #D1017D;
+            color: #E72B5C;
             text-decoration: none;
         }
     }
 }
 .cifra {
-    font-size: 120px;
+    font-size: 180px;
     font-weight: bold;
-    color: #4F2781;
+    color: #E72B5C;
 }
 @media (max-width: 991px) {
 

@@ -133,6 +133,7 @@ $(document).ready(function () {
         $(this).toggleClass('active');
         $('.menu').toggleClass('active');
         $('body').toggleClass('active');
+        $header.toggleClass('header-scroll');
     });
 
     // only number
